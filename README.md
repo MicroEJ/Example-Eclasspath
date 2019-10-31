@@ -13,6 +13,16 @@ Note that to run them on board:
  * Follow the [How-To convert a standalone app into a sandboxed app](https://github.com/MicroEJ/How-To/tree/master/StandaloneToSandboxed) guide.
  
 # Details
+
 ## logging
+
 **Available Examples**:
-* [com.microej.example.eclasspath.logging](com.microej.example.eclasspath.logging) : Writes in the logger.
+
+* [com.microej.examples.eclasspath.logging](com.microej.examples.eclasspath.logging) : Writes in the logger.
+* [com.microej.examples.eclasspath.formatter](com.microej.examples.eclasspath.formatter) :  Prints some messages using the formatter.
+
+---  
+_Markdown_   
+_Copyright 2019 MicroEJ Corp. All rights reserved._   
+_For demonstration purpose only._   
+_MicroEJ Corp. PROPRIETARY. Use is subject to license terms._  
