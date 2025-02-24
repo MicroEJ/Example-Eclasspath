@@ -1,15 +1,15 @@
 /*
  * Kotlin
  *
- * Copyright 2023-2024 MicroEJ Corp. All rights reserved.
+ * Copyright 2023-2025 MicroEJ Corp. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be found with this software.
  */
 plugins {
-    id("com.microej.gradle.application") version "0.14.0"
+    id("com.microej.gradle.application") version "1.0.0"
 }
 
 group = "com.microej.example.eclasspath"
-version = "3.0.0"
+version = "3.1.0"
 
 dependencies {
     /*
@@ -31,10 +31,10 @@ dependencies {
     /*
      * To use a VEE Port published in an artifact repository use this VEE Port dependency.
      */
-    microejVeePort("com.microej.veeport.st.stm32f7508-dk:M5QNX_eval:2.2.0")
+    microejVee("com.microej.veeport.st.stm32f7508-dk:M5QNX_eval:2.2.0")
 }
 
 microej {
-    applicationMainClass = "com.microej.example.eclasspath.logging.ExampleLogging"
+    applicationEntryPoint = "com.microej.example.eclasspath.logging.ExampleLogging"
     skippedCheckers = "nullanalysis"
 }
