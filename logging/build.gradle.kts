@@ -5,11 +5,16 @@
  * Use of this source code is governed by a BSD-style license that can be found with this software.
  */
 plugins {
-    id("com.microej.gradle.application") version "1.0.0"
+    id("com.microej.gradle.application") version libs.versions.microej.sdk
 }
 
 group = "com.microej.example.eclasspath"
-version = "3.1.0"
+version = "3.2.0"
+
+microej {
+    applicationEntryPoint = "com.microej.example.eclasspath.logging.ExampleLogging"
+    skippedCheckers = "nullanalysis"
+}
 
 dependencies {
     /*
@@ -18,8 +23,8 @@ dependencies {
      * implementation("[org]:[otherArtifact]:[M.m.p]")
      * e.g.: implementation("ej.library.runtime:basictool:1.7.0")
      */
-    implementation("ej.api:edc:1.3.5")
-    implementation("ej.library.eclasspath:logging:1.2.1")
+    implementation(libs.api.edc)
+    implementation(libs.library.logging)
 
     /*
      * Put your test dependencies here. An example of test dependency declaration is provided below:
@@ -31,10 +36,5 @@ dependencies {
     /*
      * To use a VEE Port published in an artifact repository use this VEE Port dependency.
      */
-    microejVee("com.microej.veeport.st.stm32f7508-dk:M5QNX_eval:2.2.0")
-}
-
-microej {
-    applicationEntryPoint = "com.microej.example.eclasspath.logging.ExampleLogging"
-    skippedCheckers = "nullanalysis"
+    microejVee(libs.vee.port.nxp.mimxrt1170)
 }
